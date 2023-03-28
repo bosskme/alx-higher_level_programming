@@ -1,16 +1,19 @@
 #!/usr/bin/python3
 
 def safe_print_list(my_list=[], x=0):
-    try:
-        # Use slicing to get the first x elements of the list
-        elements_to_print = my_list[:x]
-        # Loop through the elements and print them on the same line
-        for element in elements_to_print:
-            print(element, end=' ')
-        # Print a new line after all elements have been printed
-        print()
-        # Return the number of elements that were printed
-        return len(elements_to_print)
-    except:
-        # If an exception occurs, return 0
-        return 0
+    """Print x elememts of a list.
+    Args:
+        my_list (list): The list to print elements from.
+        x (int): The number of elements of my_list to print.
+    Returns:
+        The number of elements printed.
+    """
+    ret = 0
+    for i in range(x):
+        try:
+            print("{}".format(my_list[i]), end="")
+            ret += 1
+        except IndexError:
+            break
+    print("")
+    return (ret)
