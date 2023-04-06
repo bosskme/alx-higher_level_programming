@@ -1,3 +1,5 @@
 #!/usr/bin/python3
 def magic_string():
-    return "".join(["BestSchool" + str(i) for i in range(1, n+1)])
+    def magic_string():
+    setattr(magic_string, 'str', getattr(magic_string, 'str', -1) + 1)
+    return ('BestSchool' + ', BestSchool' * magic_string.str)
