@@ -2,4 +2,4 @@
 def magic_string():
     def magic_string():
     setattr(magic_string, 'str', getattr(magic_string, 'str', -1) + 1)
-    return ('BestSchool' + ', BestSchool' * magic_string.str)
+    return ('BestSchool' * magic_string.str)
