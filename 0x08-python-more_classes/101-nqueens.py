@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 import sys
 
+
 def nqueens(n):
     if not isinstance(n, int):
         print("N must be a number")
@@ -8,7 +9,7 @@ def nqueens(n):
     if n < 4:
         print("N must be at least 4")
         sys.exit(1)
-    
+
     def solve(board, queens_left):
         if queens_left == 0:
             print_board(board)
@@ -41,6 +42,7 @@ def nqueens(n):
 
     solve([], n)
 
+    
 if len(sys.argv) != 2:
     print("Usage: nqueens N")
     sys.exit(1)
