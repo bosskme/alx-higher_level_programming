@@ -2,7 +2,6 @@
 # Here is a script that lists all states from the hbtn_0e_0_usa db
 # Using the MySQL module
 
-import sys
 import MySQLdb
 
 def list_states(username, password, database):
